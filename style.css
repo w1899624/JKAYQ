@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: MediumSeaGreen;
+    color: white;
+    padding: 10px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #111;
+}
+
+.mission {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.content-links .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 10px;
+}
+
+.content-links .gallery a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: MediumSeaGreen;
+    color: white;
+    padding: 0; /* Remove padding to allow the use of width and height for square sizing */
+    border-radius: 5px;
+    margin: 10px; /* Add some space around each link */
+    width: 250px; /* Set both width and height to the same value for squares */
+    height: 250px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
+    transition: transform 0.3s; /* Optional: adds a transition effect when hovering */
+}
+
+.content-links .gallery a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Optional: scales up the link a bit when hovering */
+}
+.content-links .gallery a:hover span {
+    transform: scale(0.95);
+}
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.gallery-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 5px;
+    margin: 5px;
+    width: calc(25% - 10px); /* Adjust the width as necessary */
+    height: calc(25% - 10px);
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the links with different colors using nth-child */
+.gallery a:nth-child(1) { background-color: #e57373; }
+.gallery a:nth-child(2) { background-color: #f06292; }
+.gallery a:nth-child(3) { background-color: #ba68c8; }
+.gallery a:nth-child(4) { background-color: #9575cd; }
+.gallery a:nth-child(5) { background-color: #7986cb; }
+.gallery a:nth-child(6) { background-color: #64b5f6; }
+.gallery a:nth-child(7) { background-color: #4fc3f7; }
+.gallery a:nth-child(8) { background-color: #4dd0e1; }
+.gallery a:nth-child(9) { background-color: #4db6ac; }
+.gallery a:nth-child(10) { background-color: #81c784; }
+.gallery a:nth-child(11) { background-color: #aed581; }
+.gallery a:nth-child(12) { background-color: #dce775; }
+.gallery a:nth-child(13) { background-color: #fff176; }
+.gallery a:nth-child(14) { background-color: #ffd54f; }
+.gallery a:nth-child(15) { background-color: #ffb74d; }
+.gallery a:nth-child(16) { background-color: #ff8a65; }
+/* Repeat or adjust the pattern as necessary for more elements */
+
+/* Hover effect */
+.gallery a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.gallery-item {
+    display: block;
+    position: relative;
+    width: 250px; /* Fixed width for squares - can be percentage for responsiveness */
+    height: 250px; /* Fixed height for squares - should be equal to width for perfect squares */
+    margin: 5px;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures no content spills out */
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    padding: 10px;
+}
+
+.item-number {
+    font-size: 1.5em;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.item-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+}
+
+.gallery-item::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    z-index: 1;
+}
+.item-image {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    bottom: 0px;
+    left: 60px;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
